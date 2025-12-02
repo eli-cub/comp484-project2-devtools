@@ -96,3 +96,19 @@ function showComment(message) {
       - .delay() keeps the message visible before sliding back up.
     */
 }
+
+function addNumbers() {
+  const n1 = Number(document.getElementById("num1").value);
+  const n2 = Number(document.getElementById("num2").value);
+
+  const sum = n1 + n2;
+
+  const resultEl = document.getElementById("add-result");
+  resultEl.textContent = `${n1} + ${n2} = ${sum}`;
+}
+
+
+// hook it up
+$(function () {
+  $("#add-btn").on("click", addNumbers);
+});
